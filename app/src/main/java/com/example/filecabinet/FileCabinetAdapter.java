@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHolder> {
+
+
     @NonNull
     @Override
     public FileCabinetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
