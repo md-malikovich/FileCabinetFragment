@@ -4,4 +4,8 @@
     <string name="vh_second_name">Second name</string>
     <string name="vh_specialization">Specialization</string>
     <string name="fc_add">Add</string>
+    <string name="file_first_name">First name</string>
+    <string name="file_second_name">Second name</string>
+    <string name="vh_gender">Gender</string>
+    <string name="vh_age">Age</string>
 </resources>

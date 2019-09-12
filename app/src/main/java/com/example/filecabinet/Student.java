@@ -1,6 +1,8 @@
 package com.example.filecabinet;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student { //implements Serializable
 
     String firstName;
     String secondName;
