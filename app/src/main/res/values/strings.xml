@@ -3,4 +3,5 @@
     <string name="vh_first_name">First name</string>
     <string name="vh_second_name">Second name</string>
     <string name="vh_specialization">Specialization</string>
+    <string name="fc_add">Add</string>
 </resources>
