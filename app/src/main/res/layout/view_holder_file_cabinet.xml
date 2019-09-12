@@ -26,13 +26,6 @@
         android:hint="@string/vh_gender"/>
 
     <TextView
-        android:id="@+id/vh_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:hint="@string/vh_age"/>
-
-    <TextView
         android:id="@+id/vh_specialization"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

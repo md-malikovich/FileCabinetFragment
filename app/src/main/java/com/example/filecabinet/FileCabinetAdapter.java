@@ -15,9 +15,9 @@ public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHold
 
     public FileCabinetAdapter() {
         student = new ArrayList<>();
-        student.add(new Student("Meder", "D", 'm', 36, "Layer"));
-        student.add(new Student("Sanjar", "M", 'm', 36, "Programmer"));
-        student.add(new Student("Kamila", "M", 'f', 36, "Medic"));
+        student.add(new Student("Meder", "D", "male", "Layer"));
+        student.add(new Student("Sanjar", "M", "male",  "Programmer"));
+        student.add(new Student("Kamila", "M", "female",  "Medic"));
     }
 
     @NonNull
@@ -36,5 +36,10 @@ public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHold
     @Override
     public int getItemCount() {
         return student.size();
+    }
+
+    public void fileCabinet(Student students) {
+        student.add(students);
+        notifyDataSetChanged();
     }
 }

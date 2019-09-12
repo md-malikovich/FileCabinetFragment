@@ -28,17 +28,18 @@
         android:hint="@string/vh_gender"/>
 
     <EditText
-        android:id="@+id/file_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:hint="@string/vh_age"/>
-
-    <EditText
         android:id="@+id/file_specialization"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:hint="@string/vh_specialization"/>
+
+    <Button
+        android:id="@+id/file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/file_save"/>
+
+
 
 </LinearLayout>

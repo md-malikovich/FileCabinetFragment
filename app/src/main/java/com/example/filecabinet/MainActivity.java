@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == MY_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 Student student = (Student) data.getSerializableExtra(FileActivity.MY_KEY);
+                adapter.fileCabinet(student);
 
             }
         }
