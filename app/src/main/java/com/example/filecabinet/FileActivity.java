@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 public class FileActivity extends AppCompatActivity {
 
+    final static String MY_KEY = "my_key";
+
     EditText file_fname;
     EditText file_sname;
     EditText file_gender;

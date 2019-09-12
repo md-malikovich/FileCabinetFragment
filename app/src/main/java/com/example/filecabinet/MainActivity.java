@@ -1,5 +1,6 @@
 package com.example.filecabinet;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    final static int MY_REQUEST_CODE = 444;
 
     Button fc_button;
     RecyclerView fc_recyclerView;
@@ -31,8 +34,20 @@ public class MainActivity extends AppCompatActivity {
         fc_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                Intent intent = new Intent(MainActivity.this, FileActivity.class);
+                startActivityForResult(intent, MY_REQUEST_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == MY_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Student student = (Student) data.getSerializableExtra(FileActivity.MY_KEY);
+
+            }
+        }
     }
 }

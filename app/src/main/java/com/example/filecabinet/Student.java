@@ -2,7 +2,7 @@ package com.example.filecabinet;
 
 import java.io.Serializable;
 
-public class Student { //implements Serializable
+public class Student implements Serializable {
 
     String firstName;
     String secondName;
