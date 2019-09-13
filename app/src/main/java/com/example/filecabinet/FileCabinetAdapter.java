@@ -11,13 +11,15 @@ import java.util.ArrayList;
 
 public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHolder> {
 
+    IamOnDutyToday teacher;
+
     ArrayList<Student> student;
 
     public FileCabinetAdapter() {
         student = new ArrayList<>();
-        student.add(new Student("Meder", "D", "male", "Layer"));
-        student.add(new Student("Sanjar", "M", "male",  "Programmer"));
-        student.add(new Student("Kamila", "M", "female",  "Medic"));
+        student.add(new Student(0,"Meder", "D", "male", "Layer"));
+        student.add(new Student(1, "Sanjar", "M", "male",  "Programmer"));
+        student.add(new Student(2, "Kamila", "M", "female",  "Medic"));
     }
 
     @NonNull
@@ -25,7 +27,10 @@ public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHold
     public FileCabinetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.view_holder_file_cabinet, parent, false);
-        return new FileCabinetViewHolder(view);
+
+        FileCabinetViewHolder fc = new FileCabinetViewHolder(view);
+        fc.teacher = teacher;
+        return fc;
     }
 
     @Override

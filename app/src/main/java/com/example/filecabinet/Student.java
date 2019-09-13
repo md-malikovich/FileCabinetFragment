@@ -8,8 +8,10 @@ public class Student implements Serializable {
     String secondName;
     String gender;
     String specialization;
+    public int number;
 
-    public Student(String firstName, String secondName, String gender, String specialization) {
+    public Student(int number, String firstName, String secondName, String gender, String specialization) {
+        this.number = number;
         this.firstName = firstName;
         this.secondName = secondName;
         this.gender = gender;

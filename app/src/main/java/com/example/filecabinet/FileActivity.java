@@ -36,11 +36,11 @@ public class FileActivity extends AppCompatActivity {
                 String secondName = file_sname.getText().toString();
                 String gender = file_gender.getText().toString();
                 String specialization = file_specialization.getText().toString();
-
-                Student student = new Student(firstName, secondName, gender, specialization);
+                Student student = new Student(0, firstName, secondName, gender, specialization);
                 Intent intent = new Intent();
                 intent.putExtra(MY_KEY, student);
                 setResult(RESULT_OK, intent);
+
                 finish();
             }
         });

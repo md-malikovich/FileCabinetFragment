@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IamOnDutyToday {
 
     final static int MY_REQUEST_CODE = 444;
 
@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         fc_recyclerView = findViewById(R.id.fc_recyclerview);
         adapter = new FileCabinetAdapter();
-        fc_recyclerView.setAdapter(adapter);
+        adapter.teacher = this;
 
+        fc_recyclerView.setAdapter(adapter);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         fc_recyclerView.setLayoutManager(manager);
 
@@ -50,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    @Override
+    public void openFile(Student student) {
+        Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+        intent.putExtra(DetailsActivity.STUDY_KEY, student);
+        startActivity(intent);
     }
 }
 
