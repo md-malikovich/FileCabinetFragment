@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements IamOnDutyToday {
             if (resultCode == RESULT_OK) {
                 Student student = (Student) data.getSerializableExtra(FileActivity.MY_KEY);
                 adapter.fileCabinet(student);
-
             }
         }
     }
@@ -60,10 +59,6 @@ public class MainActivity extends AppCompatActivity implements IamOnDutyToday {
         startActivity(intent);
     }
 }
-
-
-
-//ПОСЛЕ СДЕЛАТЬ КЛИКАБЕЛЬНЫМ vh И ПРИ НАЖАТИИ НА НЕГО ДОЛЖНО ОТКРЫВАТЬСЯ НОВОЕ АКТИВИТИ С ИНФОРМАЦИЕЙ О СТУДЕНТЕ
 //3 экрана: 1. список студентов (имя и курс), 2. информация о студенте (полная инфо-я), 3. создание студента
 
 

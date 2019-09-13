@@ -27,7 +27,6 @@ public class FileCabinetAdapter extends RecyclerView.Adapter<FileCabinetViewHold
     public FileCabinetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.view_holder_file_cabinet, parent, false);
-
         FileCabinetViewHolder fc = new FileCabinetViewHolder(view);
         fc.teacher = teacher;
         return fc;
