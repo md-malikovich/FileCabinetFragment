@@ -26,6 +26,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         Student student = getStudent();
         showStudent(student);
+
+        dFname.setText(student.firstName);
+        dSname.setText(student.secondName);
+        dGender.setText(student.gender);
+        dSpecialization.setText(student.specialization);
     }
 
     private Student getStudent() {
