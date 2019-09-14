@@ -29,6 +29,7 @@ public class FileCabinetViewHolder extends RecyclerView.ViewHolder     {
     }
 
     public void onBind(Student student) {
+        this.student = student; // сохраняем студента
         vh_fname.setText(student.firstName);
         vh_sname.setText(student.secondName);
         vh_specialization.setText(student.specialization);
